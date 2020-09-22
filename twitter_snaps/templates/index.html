@@ -1,0 +1,86 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block register_link %}register{% endblock %}
+{% block content %}
+{% csrf_token %}
+<div class="container-fluid">
+<div class="row">
+    <div class="col col-xs-offset-2 col-sm-offset-4 col-lg-offset-5 col-md-offset-5">
+        <button id="twitter" class="btn select-btn twitter-btn selected" onclick="twitterOrTumblrToggle(this);">Twitter</button>
+        <button id="tumblr" class="btn select-btn tumblr-btn" onclick="twitterOrTumblrToggle(this);">Tumblr</button>
+        <button id="everything" class="btn select-btn everything-btn" onclick="twitterOrTumblrToggle(this);">Everything</button>
+
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm-3 col-xs-2 col-md-4 col-lg-4">
+    <span style="float: right; font-size: 30px; margin-top: 19px;" data-toggle="modal" data-target="#helpModal" class="glyphicon glyphicon-question-sign"></span>
+    </div>
+    <div class="col col-xs-8 col-sm-7 col-lg-4 col-md-4">
+        <div class="input-group search-bar">
+            <i style="background-color: #ffffff" class="input-group-addon" id="hash">#</i>
+            <input id="search-text" type="text" class="form-control" placeholder="Search" aria-describedby="hash">
+            <div class="search-btn input-group-addon" onclick="twitterOrTumblr();" aria-describedby="search-text">
+            <span class="glyphicon glyphicon-search"></span>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-3 col-xs-2 col-md-4 col-lg-4">
+    </div>
+
+</div>
+<div class="row">
+    <div class="col-sm-offset-4 col-xs-offset-3 col-md-offset-5">
+        <input id="includeMore" type="checkbox" onclick="checkBoxToggle();"> Include previous results
+    </div>
+</div>
+    {% if not request.user.is_active %}
+        <script>
+        $("#search-text").attr("disabled", "disabled");
+        $(".search-btn").hide();
+        </script>
+    {% endif %}
+<br><br><br>
+<div class="row" id="tweet-content">
+</div>
+<br><br>
+</div>
+    <div id="helpModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h1 class="modal-title">Snappy - Help</h1>
+            </div>
+            <div class="modal-body">
+                <h3>General Instructions</h3>
+                <ul>
+                    <li>Snappy is a tool to display images in Twitter/Tubmlr with given tags.</li>
+                    <li>User should have an account to use this application.</li>
+                    <li>Previous results can be shown by checking the feature.</li>
+                    <li>Requests are limited. App might not work after some huge
+                        searches in short span of time. Use it after some time</li>
+                </ul>
+                <h3>Twitter Hashtag Search</h3>
+                <ul>
+                    <li>Search the hashtag.</li>
+                    <li>The User and the Tweet itself of the searched tweet can be viewed by hovering over the image.</li>
+                    <li>Click an image to open the gallery.</li>
+                </ul>
+
+                <h3>Tumblr Tag Search</h3>
+                <ul>
+                    <li>Search the tag.</li>
+                    <li>The User and the content of the results can be viewed by hovering over the image.</li>
+                    <li>Click an image to open the gallery.</li>
+                </ul>
+            </div>
+            <div class="modal-footer">
+                <p>Mail me <a href="mailto:chamow97@hotmail.com">chamow97@hotmail.com</a> for further queries.</p>
+                <button class="btn btn-info
+" type="button" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+    </div>
+{% endblock %}

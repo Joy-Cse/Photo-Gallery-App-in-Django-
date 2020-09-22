@@ -1,0 +1,161 @@
+body{
+    color: #000;
+    margin: 60px 20px 0px 20px;
+}
+.loader {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+}
+
+.navbar-brand{
+    font-family: 'Lobster', cursive;
+    font-size: 30px;
+}
+.nav-content{
+    margin: 0px 30px 0px 30px;
+}
+.nav-button a{
+    color: #1ABE00;
+}
+.nav-button{
+    margin: 0px 5px 0px 5px;
+    border-style: solid;
+    border-color: #1ABE00;
+}
+.nav-button:hover{
+    background-color: #1ABE00;
+    color: #fff;
+}
+.nav-button:hover a{
+    color: #FFFFFF;
+}
+#heading{
+    font-size: 300%;
+    text-align: center;
+}
+.fields{
+    height: 30px;
+    border-radius: 8%;
+}
+#heading1{
+    font-size: 35px;
+}
+#content-text{
+    font-size: 16px;
+    text-align: center;
+}
+.select-btn{
+    margin: 30px 10px 0px 10px;
+    text-align: center;
+}
+.twitter-btn{
+    border-style: solid;
+    border-color: #0084b4;
+    background-color: #FFFFFF;
+    color: #0084b4;
+}
+.tumblr-btn{
+    border-style: solid;
+    border-color: #34526f;
+    background-color: #ffffff;
+    color: #34526f;
+}
+.tumblr-btn:hover, .tumblr-btn.selected{
+    border-style: solid;
+    border-color: #ffffff;
+    background-color: #34526f;
+    color: #ffffff;
+}
+
+.everything-btn{
+    border-style: solid;
+    border-color: #00ff00;
+    background-color: azure;
+    color: #000000  ;
+}
+.everything-btn:hover, .everything-btn.selected{
+    border-style: solid;
+    border-color: #ffffff;
+    background-color: #00ff00;
+    color: #000000;
+}
+
+.twitter-btn:hover, .twitter-btn.selected{
+    border-style: solid;
+    border-color: #ffffff;
+    background-color: #0084b4;
+    color: #ffffff;
+
+}
+.reg-form{
+    background-color: #c2cbb6;
+    color: #000000;
+    margin-top: 7%;
+    text-align: center;
+}
+.navigation{
+    font-size: larger;
+    color: orangered;
+
+}
+.nav-pills{
+    border-radius: 5%;
+    background-color: transparent;
+}
+.nav-pills li{
+    border: 1px solid black;
+    border-radius: 5%;
+}
+.navbar-nav{
+        text-align: center;
+        display: inline;
+    }
+.logout{
+    float: right;
+    margin-top: 3%;
+    background-color: #c9302c;
+}
+a:hover
+{
+    color: #000000;
+    text-decoration: none;
+}
+a{
+    color: #000000;
+}
+.navbar-default{
+    background-color: #FFFFFF;
+    box-shadow: 2px 2px 5px #000000;
+}
+.active{
+    color: #000000;
+}
+.search-bar{
+    text-align: center;
+    margin-top: 20px;
+}
+#search-text{
+    background-color: #FFFFFF;
+    color: black;
+    border-radius: 5px;
+}
+.search-btn{
+
+    border-radius: 5px;
+    background-color: #FFFFFF;
+}
+.search-btn:hover{
+    background-color: #0084b4;
+    color: #FFFFFF;
+}
+.modal-title{
+    text-align: center;
+}
+@media screen and (min-width: 480px) {
+    .navbar-nav{
+          float: right;
+    }
+}
+
